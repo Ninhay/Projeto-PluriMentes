@@ -11,21 +11,13 @@ const MENTES_COLORS = [
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden">
-      {/* Decorative blurred blobs */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-10 top-24 h-64 w-64 rounded-full bg-pm-blue/20 blur-3xl" />
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-pm-yellow/25 blur-3xl" />
-        <div className="absolute bottom-0 right-24 h-72 w-72 rounded-full bg-pm-red/20 blur-3xl" />
-        <div className="absolute bottom-0 left-24 h-56 w-56 rounded-full bg-pm-green/20 blur-3xl" />
-      </div>
-
+    <section id="inicio">
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-8 lg:pt-20">
-        <p className="text-xs font-semibold tracking-[0.25em] text-pm-gray">
+        <p className="animate-fade-up text-xs font-semibold tracking-[0.25em] text-pm-gray">
           PLATAFORMA EDUCATIVA · INCLUSÃO ESCOLAR
         </p>
 
-        <h1 className="mt-6 font-display font-extrabold leading-[0.95] tracking-tight text-pm-ink">
+        <h1 className="animate-fade-up mt-6 font-display font-extrabold leading-[0.95] tracking-tight text-pm-ink [animation-delay:120ms]">
           <span className="block text-[clamp(3.5rem,10vw,8rem)]">PLURI</span>
           <span className="block text-[clamp(3.5rem,10vw,8rem)]">
             {MENTES_COLORS.map(({ char, color }, i) => (
@@ -36,18 +28,18 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-8 max-w-xl text-lg text-pm-gray">
+        <p className="animate-fade-up mt-8 max-w-xl text-lg text-pm-gray [animation-delay:240ms]">
           Plataforma educativa para conscientização sobre neurodivergência e
           inclusão escolar.
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div className="animate-fade-up mt-8 flex flex-wrap items-center gap-4 [animation-delay:360ms]">
           <a
             href="#neurodivergencias"
-            className="inline-flex items-center gap-2 rounded-full bg-pm-ink px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-pm-ink px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
           >
             Conheça as neurodivergências
-            <ArrowRight size={16} />
+            <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
           </a>
 
           <a

@@ -57,7 +57,7 @@ export default function ResourcesSection() {
             <div
               key={card.id}
               id={card.id}
-              className={`relative flex min-h-[380px] flex-col overflow-hidden rounded-2xl p-8 text-white ${card.bg}`}
+              className={`group relative flex min-h-[380px] flex-col overflow-hidden rounded-2xl p-8 text-white transition-transform duration-300 hover:-translate-y-1 ${card.bg}`}
             >
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
                 {card.eyebrow}
@@ -74,7 +74,7 @@ export default function ResourcesSection() {
                 className="mt-auto inline-flex w-fit items-center gap-3 pt-8 text-sm font-semibold"
               >
                 Explorar
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-transform duration-200 group-hover:translate-x-1">
                   <ArrowRight size={15} />
                 </span>
               </a>

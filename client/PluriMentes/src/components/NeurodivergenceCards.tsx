@@ -117,7 +117,7 @@ export default function NeurodivergenceCards() {
           return (
             <div
               key={card.title}
-              className="rounded-2xl border border-black/5 bg-white p-8 transition-shadow hover:shadow-lg"
+              className="rounded-2xl border border-black/5 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-start justify-between">
                 <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${colors.bg}`}>
@@ -139,11 +139,11 @@ export default function NeurodivergenceCards() {
 
               <a
                 href="#"
-                className="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-pm-ink"
+                className="group mt-6 inline-flex items-center gap-3 text-sm font-semibold text-pm-ink"
               >
                 Saiba mais
                 <span
-                  className={`flex h-7 w-7 items-center justify-center rounded-full ${colors.bg}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-full transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 ${colors.bg}`}
                 >
                   <ArrowUpRight size={14} className="text-white" />
                 </span>
