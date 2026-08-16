@@ -23,10 +23,12 @@ function Track() {
     <div className="flex shrink-0 items-center">
       {PHRASES.map((phrase, i) => (
         <span key={i} className="flex items-center">
-          <span className="mx-8 whitespace-nowrap text-2xl font-medium text-pm-ink/80">
+          <span className="text-pm-ink/80 mx-8 text-2xl font-medium whitespace-nowrap">
             {phrase}
           </span>
-          <span className={`h-2 w-2 rounded-full ${DOT_COLORS[i % DOT_COLORS.length]}`} />
+          <span
+            className={`h-2 w-2 rounded-full ${DOT_COLORS[i % DOT_COLORS.length]}`}
+          />
         </span>
       ))}
     </div>
@@ -35,8 +37,8 @@ function Track() {
 
 export default function Marquee() {
   return (
-    <div className="overflow-hidden border-y border-black/5 bg-pm-bg py-6">
-      <div className="flex w-max animate-marquee">
+    <div className="bg-pm-bg overflow-hidden border-y border-black/5 py-6">
+      <div className="animate-marquee flex w-max">
         <Track />
         <Track />
       </div>

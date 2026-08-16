@@ -26,9 +26,14 @@ export default function useWeightedScroll() {
 
       event.preventDefault();
 
-      const delta = event.deltaY * (event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 : 1);
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      targetPosition = Math.max(0, Math.min(maxScroll, targetPosition + delta * 0.52));
+      const delta =
+        event.deltaY * (event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 : 1);
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+      targetPosition = Math.max(
+        0,
+        Math.min(maxScroll, targetPosition + delta * 0.52),
+      );
 
       if (animationFrame === undefined) {
         currentPosition = window.scrollY;
@@ -40,13 +45,15 @@ export default function useWeightedScroll() {
       if (animationFrame === undefined) targetPosition = window.scrollY;
     };
 
-    const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+    const originalScrollBehavior =
+      document.documentElement.style.scrollBehavior;
     document.documentElement.style.scrollBehavior = "auto";
     window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      if (animationFrame !== undefined) window.cancelAnimationFrame(animationFrame);
+      if (animationFrame !== undefined)
+        window.cancelAnimationFrame(animationFrame);
       document.documentElement.style.scrollBehavior = originalScrollBehavior;
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("scroll", handleScroll);

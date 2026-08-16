@@ -1,32 +1,30 @@
-# React + TypeScript + Vite
+# PluriMentes
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Plataforma educativa sobre neurodivergência e inclusão escolar, construída com
+React, TypeScript, Tailwind CSS e Vite.
 
-Currently, two official plugins are available:
+## Comandos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm run dev          # inicia o ambiente de desenvolvimento
+npm run build        # valida tipos e gera a build de produção
+npm run lint         # executa o Oxlint
+npm run format       # formata o projeto com Prettier
+npm run format:check # valida a formatação sem alterar arquivos
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Estrutura
+
+```text
+src/
+├── components/  # componentes reutilizáveis da interface
+├── constants/   # rotas e valores imutáveis
+├── hooks/       # hooks customizados
+├── pages/       # páginas da aplicação
+├── routes/      # resolução de rotas da aplicação
+├── styles/      # estilos globais e tema Tailwind
+└── types/       # contratos TypeScript compartilhados
+```
+
+Os imports internos usam o alias `@/`, configurado tanto no Vite quanto no
+TypeScript.

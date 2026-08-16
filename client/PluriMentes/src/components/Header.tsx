@@ -1,36 +1,36 @@
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const NAV_ITEMS = [
-  { label: "Início", href: "#inicio" },
-  { label: "O que é neurodivergência", href: "#neurodivergencia" },
-  { label: "Educação", href: "#educacao" },
-  { label: "Comunidade", href: "#comunidade" },
-  { label: "Glossário", href: "#glossario" },
-  { label: "Quem somos", href: "#quem-somos" },
-];
+import { useState } from "react";
+import {
+  ACTIVE_NAVIGATION_BY_PATH,
+  NAVIGATION_ITEMS,
+  ROUTES,
+} from "@/constants/routes";
 
 export default function Header() {
-  const [active, setActive] = useState("Início");
+  const [active, setActive] = useState(
+    ACTIVE_NAVIGATION_BY_PATH[window.location.pathname] ?? "Início",
+  );
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-pm-bg/90 backdrop-blur">
+    <header className="bg-pm-bg/90 fixed inset-x-0 top-0 z-50 border-b border-black/5 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
-        {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-2 shrink-0">
-          <span className="flex h-8 w-8 overflow-hidden rounded-full">
-            <span className="h-full w-1/2 bg-pm-green" />
-            <span className="h-full w-1/2 bg-pm-blue" />
+        <a
+          href={`${ROUTES.home}#inicio`}
+          className="flex shrink-0 items-center gap-2"
+        >
+          <span aria-hidden="true" className="flex items-center">
+            <span className="bg-pm-yellow/80 h-8 w-8 rounded-full" />
+            <span className="bg-pm-blue/80 -ml-4 h-8 w-8 rounded-full" />
           </span>
-          <span className="font-display text-lg font-bold text-pm-ink">
+          <span className="font-display text-pm-ink text-lg font-bold">
             Pluri<span className="text-pm-blue">Mentes</span>
           </span>
         </a>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 rounded-full lg:flex">
-          {NAV_ITEMS.map((item) => (
+          {NAVIGATION_ITEMS.map((item) => (
             <a
               key={item.label}
               href={item.href}
@@ -48,8 +48,8 @@ export default function Header() {
 
         <div className="hidden shrink-0 lg:block">
           <a
-            href="#contato"
-            className="rounded-full bg-pm-yellow px-5 py-2.5 text-sm font-semibold text-pm-ink shadow-sm transition-transform hover:scale-[1.03]"
+            href={ROUTES.sobreNos}
+            className="bg-pm-yellow text-pm-ink rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition-transform hover:scale-[1.03]"
           >
             Fale conosco
           </a>
@@ -57,19 +57,25 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex items-center justify-center rounded-full p-2 text-pm-ink lg:hidden"
+          className="text-pm-ink inline-flex items-center justify-center rounded-full p-2 lg:hidden"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Abrir menu"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          aria-controls="menu-principal"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? (
+            <X size={24} strokeWidth={2.25} aria-hidden="true" />
+          ) : (
+            <Menu size={24} strokeWidth={2.25} aria-hidden="true" />
+          )}
         </button>
       </div>
 
       {/* Mobile nav */}
       {open && (
-        <div className="border-t border-black/5 bg-pm-bg px-6 pb-6 pt-2 lg:hidden">
-          <nav className="flex flex-col gap-1">
-            {NAV_ITEMS.map((item) => (
+        <div className="bg-pm-bg border-t border-black/5 px-6 pt-2 pb-6 lg:hidden">
+          <nav id="menu-principal" className="flex flex-col gap-1">
+            {NAVIGATION_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -89,8 +95,8 @@ export default function Header() {
           </nav>
 
           <a
-            href="#contato"
-            className="mt-4 inline-block rounded-full bg-pm-yellow px-5 py-2.5 text-sm font-semibold text-pm-ink"
+            href={ROUTES.sobreNos}
+            className="bg-pm-yellow text-pm-ink mt-4 inline-block rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             Fale conosco
           </a>
