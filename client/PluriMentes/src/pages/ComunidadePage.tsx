@@ -7,7 +7,12 @@ interface CartaoComunidade {
   numero: string;
   titulo: string;
   texto: string;
+  textoExtra?: string;
   corBadge: string;
+  link?: {
+    href: string;
+    label: string;
+  };
 }
 
 const cartoes: CartaoComunidade[] = [
@@ -15,43 +20,49 @@ const cartoes: CartaoComunidade[] = [
     numero: "01",
     titulo: "Como acolher uma pessoa neurodivergente",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      " Lidar com uma pessoa neurodivergente exige escuta ativa e respeito aos limites pessoais de cada um. Não acredite que acolher um neurodivergente é tentar mudar seu jeito de ser, muito pelo contrário, é entender e fazer parte da construção de um ambiente seguro. Antes de tudo, vale ressaltar que todos os neurodivergentes possuem suas particularidades, por isso a importância de compreender e se colocar no lugar do próximo. Tenha empatia com o indivíduo se ele necessitar de espaço, não tenha medo de perguntar antes de tomar alguma iniciativa que possa desencadear situações de desconforto, busque sempre entender seus limites sensoriais para evitar sobrecargas físicas e mentais, evite rótulos (cada pessoa tem sua forma de vivenciar a neurodivergência).",
     corBadge: "bg-pm-purple",
   },
   {
     numero: "02",
     titulo: "Como apoiar um aluno",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Para apoiar um aluno neurodivergente, é de extrema necessidade que o professor compreenda as necessidades especiais do aluno, para assim, trazer uma rotina com objetivos claros e trazer um material adaptado de acordo com o estudante. Evite os materiais que possam sobrecarregar o aluno com estímulos visuais e auditivos, traga tarefas de socialização voltadas para os estudantes e ofereça ao aluno mais possibilidades de avaliação, se perceberem em conjunto com a gestão escolar, a família e o próprio neurodivergente que há a necessidade de um novo método avaliativo.",
     corBadge: "bg-pm-orange",
   },
   {
     numero: "03",
     titulo: "Como lidar com diferenças",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Antes de tudo, seja um exemplo de respeito e empatia para as demais pessoas; quando falhar, reconheça o próprio erro. Conscientize os demais sobre termos preconceituosos, busque diálogo com o neurodivergente – respeitando sempre seu espaço, é claro – proponha atividades de acolhimento e inclusão.",
     corBadge: "bg-pm-yellow",
   },
   {
     numero: "04",
     titulo: "A importância da empatia",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A empatia — a capacidade de se colocar no lugar do outro e sentir suas dores ou perspectivas — tornou-se uma necessidade urgente e, ao mesmo tempo, um recurso raro na sociedade atual. Marcada pela polarização, pelo excesso de conexões digitais superficiais e pelo individualismo, a cultura contemporânea frequentemente dificulta o exercício genuíno de escutar e validar o sofrimento alheio. Ela é importante na construção de uma sociedade mais digna, reduzindo conflitos e fortalecendo as relações humanas, principalmente quando for tratar de um neurodivergente.",
     corBadge: "bg-pm-red",
   },
   {
     numero: "05",
     titulo: "Comunicação",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A comunicação é fundamental para a convivência, a aprendizagem e a construção de relações respeitosas. No contexto da neurodiversidade, é importante compreender que nem todas as pessoas se comunicam da mesma maneira. Pessoas neurodivergentes podem apresentar diferentes formas de comunicação, como fala, escrita, gestos, expressões faciais, imagens, símbolos ou tecnologias assistivas. Algumas podem precisar de mais tempo para compreender informações ou expressar o que sentem e pensam.",
     corBadge: "bg-pm-green",
   },
   {
     numero: "06",
     titulo: "Inclusão escolar",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    corBadge: "bg-pm-blue",
+      "Os quatro pilares da educação propostos pela UNESCO — aprender a conhecer, fazer, viver juntos e ser — contribuem para uma escola mais inclusiva. Eles valorizam não apenas o aprendizado, mas também o respeito às diferenças, a cooperação e o desenvolvimento de cada estudante. Na inclusão escolar, esses pilares ajudam a construir um ambiente onde todos possam aprender, participar, conviver e desenvolver suas potencialidades, respeitando diferentes formas de aprender, pensar e se comunicar.",
+      corBadge: "bg-pm-blue",
+    textoExtra:
+      "Saiba mais sobre os quatro pilares da educação no site ",
+    link: {
+      href: "https://institutoayrtonsenna.org.br/4-pilares-educacao-unesco/",
+      label: "4 Pilares da Educação da UNESCO - Instituto Ayrton Senna.",
+    },
   },
 ];
 
@@ -92,7 +103,9 @@ function CartaoComunidadeItem({
   numero,
   titulo,
   texto,
+  textoExtra,
   corBadge,
+  link,
   delay = 0,
 }: CartaoProps) {
   return (
@@ -112,7 +125,28 @@ function CartaoComunidadeItem({
       <h2 className="font-display text-pm-ink mt-8 text-2xl font-bold">
         {titulo}
       </h2>
-      <p className="text-pm-gray mt-4 leading-relaxed">{texto}</p>
+      <p className="text-pm-gray mt-4 leading-relaxed">
+        {texto}
+        {textoExtra ? (
+          <>
+            <br /> <br />
+            {textoExtra}
+          </>
+        ) : null}
+        {link ? (
+          <>
+            <br />
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-pm-blue underline underline-offset-2 transition hover:text-pm-ink"
+            >
+              {link.label}
+            </a>
+          </>
+        ) : null}
+      </p>
     </article>
   );
 }

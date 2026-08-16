@@ -1,7 +1,7 @@
 const PHRASES = [
-  "Cada mente é única",
   "Neurodiversidade",
   "Inclusão",
+  "Equidade",
   "Empatia",
   "Respeito",
   "Acolhimento",

@@ -14,7 +14,7 @@ const CARDS: ResourceCard[] = [
     eyebrow: "PARA PROFESSORES E PROFISSIONAIS DA ESCOLA",
     title: "Educação",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Conteúdos e estratégias para apoiar práticas pedagógicas inclusivas e promover a aprendizagem de estudantes neurodivergentes.",
     bg: "bg-pm-blue",
     icon: GraduationCap,
   },
@@ -24,17 +24,17 @@ const CARDS: ResourceCard[] = [
     eyebrow: "PARA ALUNOS, FAMILIARES E COMUNIDADE ESCOLAR",
     title: "Comunidade",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Informações e orientações para fortalecer o acolhimento, a inclusão e a participação de pessoas neurodivergentes na comunidade escolar.",
     bg: "bg-pm-green",
     icon: HeartHandshake,
   },
   {
     id: "glossario",
     href: ROUTES.glossario,
-    eyebrow: "TERMOS E CONCEITOS EXPLICADOS DE FORMA SIMPLES",
+    eyebrow: "CONCEITOS",
     title: "Glossário",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Encontre definições e conceitos sobre neurodivergência, inclusão, educação especial e diferentes condições do neurodesenvolvimento. Consulte explicações sobre termos importantes, características, estratégias de apoio e conceitos relacionados ao ambiente educacional.",
     bg: "bg-pm-orange",
     icon: Bookmark,
   },

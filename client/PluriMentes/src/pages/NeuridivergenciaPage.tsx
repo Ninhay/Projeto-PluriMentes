@@ -10,37 +10,38 @@ const conteudo = [
     numero: "01",
     titulo: "O que significa neurodivergência",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A neurodivergência refere-se às diferentes formas de funcionamento neurológico que podem influenciar a maneira como uma pessoa aprende, pensa, percebe o ambiente, comunica-se e interage socialmente. Essa perspectiva reconhece essas diferenças como parte da diversidade humana e considera as particularidades, necessidades e potencialidades de cada indivíduo.",
+      
   },
   {
     numero: "02",
     titulo: "O conceito de neurodiversidade",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A neurodiversidade é a compreensão de que não existe apenas uma única forma considerada adequada de funcionamento neurológico. O conceito valoriza a diversidade entre as pessoas e contribui para uma perspectiva que busca reduzir o estigma, o preconceito e o capacitismo, promovendo maior respeito às diferentes formas de ser, aprender e participar da sociedade.",
   },
   {
     numero: "03",
     titulo: "Exemplos de neurodivergências",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Entre as condições e perfis frequentemente abordados no campo da neurodiversidade estão o Transtorno do Espectro Autista (TEA), TDAH, dislexia e discalculia. As pesquisas também discutem outras características do desenvolvimento e da aprendizagem, ressaltando que cada pessoa apresenta necessidades e potencialidades próprias.",
   },
   {
     numero: "04",
     titulo: "Neurodivergência e neurotipicidade",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Neurodivergência e neurotipicidade são termos utilizados para representar diferentes formas de funcionamento neurológico. Enquanto o termo neurodivergente descreve pessoas cujo funcionamento se distancia do padrão considerado neurotípico, a perspectiva da neurodiversidade propõe compreender essas diferenças sem estabelecer uma hierarquia entre os diferentes modos de funcionamento.",
   },
   {
     numero: "05",
     titulo: "A importância do respeito e da inclusão",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Respeitar a neurodiversidade significa reconhecer as diferenças individuais sem transformar características neurológicas em motivo de exclusão ou inferiorização. A inclusão exige combater o capacitismo, reduzir barreiras e garantir condições para que cada pessoa possa participar, aprender e desenvolver suas potencialidades com dignidade e equidade.",
   },
   {
     numero: "06",
     titulo: "Neurodivergência no ambiente escolar",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "No ambiente escolar, compreender a neurodivergência é fundamental para desenvolver práticas pedagógicas inclusivas, flexíveis e acessíveis. As pesquisas destacam a importância da formação dos professores, da adaptação das estratégias de ensino e da consideração das características individuais dos estudantes para favorecer a aprendizagem, a participação e a inclusão escolar.",
   },
 ];
 
@@ -202,8 +203,8 @@ export default function NeurodivergenciaPage() {
               className="animate-fade-up text-pm-gray mt-8 max-w-xl leading-relaxed"
               style={{ animationDelay: "240ms" }}
             >
-              Uma explicação clara e acessível sobre a diversidade das mentes
-              humanas — e por que ela torna a escola (e o mundo) um lugar
+              Uma explicação acessível sobre a diversidade das mentes
+              humanas e por que ela torna a escola (e o mundo) um lugar
               melhor.
             </p>
           </div>

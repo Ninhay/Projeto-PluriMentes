@@ -10,17 +10,36 @@ interface CartaoSobre {
   texto: string;
 }
 
-const LOREM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+const textoDesenvolvedores =
+  "O PluriMentes foi desenvolvido por Maria Isabela de Lima Alencar e Marianna de Oliveira Sousa, com orientação do professor Cícero Samuel Rodrigues Mendes, no âmbito da EEEP Valter Nunes de Alencar, em Araripe-CE. O projeto foi apresentado no XII Festival Científico e Tecnológico da Escola Estadual de Educação Profissional Valter Nunes de Alencar (FESCTEV), em 2026.";
+
+const textoContato =
+  "O PluriMentes também é um espaço aberto ao diálogo com pesquisadores, professores, profissionais da educação e demais interessados em neurodiversidade e inclusão escolar. Entre em contato para esclarecer dúvidas sobre o projeto, conhecer nossa pesquisa e discutir informações.";
 
 const cartoes: CartaoSobre[] = [
-  { numero: "01", titulo: "O que é o PluriMentes", texto: LOREM },
-  { numero: "02", titulo: "Por que o projeto foi criado", texto: LOREM },
-  { numero: "03", titulo: "Nosso objetivo e público", texto: LOREM },
+  {
+    numero: "01",
+    titulo: "O que é o PluriMentes",
+    texto:
+      "O PluriMentes é uma plataforma digital informativa e educativa criada para reunir conteúdos sobre neurodivergência, inclusão escolar, direitos, estratégias pedagógicas e orientações para estudantes e profissionais da educação. O projeto utiliza a tecnologia como instrumento de conscientização, acesso contínuo à informação e promoção de uma cultura escolar mais acolhedora, acessível e inclusiva."
+  },
+  {
+    numero: "02",
+    titulo: "Por que o projeto foi criado",
+    texto:
+      "O projeto foi criado diante da necessidade de ampliar o conhecimento sobre neurodiversidade nas escolas e combater situações de preconceito, exclusão e capacitismo identificadas na pesquisa realizada pelo grupo. O estudo envolveu aproximadamente 391 estudantes e profissionais da educação de três escolas de Araripe, e os resultados mostraram que, embora muitos estudantes já tivessem contato com o tema, ainda existiam conhecimentos limitados e uma demanda significativa por informação e conscientização."
+  },
+  {
+    numero: "03",
+    titulo: "Nosso objetivo e público",
+    texto:
+      "O principal objetivo do PluriMentes é promover a inclusão e a valorização de pessoas neurodivergentes, ampliando o acesso à informação e incentivando ações educativas que contribuam para o combate à marginalização e ao capacitismo. A plataforma foi pensada especialmente para estudantes, professores, profissionais da educação, famílias e comunidade escolar, oferecendo conteúdos que possam auxiliar na compreensão da neurodiversidade e na construção de práticas mais inclusivas."
+  },
   {
     numero: "04",
     titulo: "Por que falar de neurodivergência na escola",
-    texto: LOREM,
+    texto:
+      "Falar sobre neurodivergência na escola é importante porque a falta de informação pode dificultar o acolhimento, a aprendizagem e a participação dos estudantes. A pesquisa do PluriMentes identificou relatos de preconceito, exclusão e piadas ofensivas nas instituições analisadas, além de apontar a necessidade de maior formação dos profissionais e de adaptação de materiais e metodologias. Nesse contexto, informar é também uma forma de combater barreiras, promover respeito e contribuir para uma escola mais inclusiva."
   },
 ];
 
@@ -111,10 +130,7 @@ export default function SobrePage() {
             className="animate-fade-up text-pm-gray mt-10 max-w-xl leading-relaxed"
             style={{ animationDelay: "240ms" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            O <b>PluriMentes</b> é um projeto educacional desenvolvido para ampliar o acesso à informação sobre neurodiversidade e fortalecer a inclusão escolar no município de Araripe-CE. A iniciativa surgiu a partir da identificação de desafios como a desinformação,preconceito, capacitismo e a falta de práticas pedagógicas inclusivas, buscando transformar conhecimento em informação acessível para a comunidade.
           </p>
         </div>
       </header>
@@ -147,9 +163,11 @@ export default function SobrePage() {
             02 · Por trás do PluriMentes
           </p>
           <h2 className="font-display mt-6 text-5xl font-extrabold tracking-tight md:text-6xl">
-            Os desenvolvedores
+            Integrantes do grupo de pesquisa
           </h2>
-          <p className="text-pm-gray mt-8 max-w-3xl leading-relaxed">{LOREM}</p>
+          <p className="text-pm-gray mt-8 max-w-3xl leading-relaxed">
+            {textoDesenvolvedores}
+          </p>
         </div>
       </section>
 
@@ -174,7 +192,7 @@ export default function SobrePage() {
                 Vamos conversar?
               </h2>
               <p className="mt-6 max-w-md leading-relaxed text-white/60">
-                {LOREM}
+                {textoContato}
               </p>
 
               <a

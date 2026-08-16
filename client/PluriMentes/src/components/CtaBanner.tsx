@@ -12,17 +12,14 @@ export default function CtaBanner() {
 
         <div className="relative max-w-2xl">
           <p className="text-xs font-semibold tracking-[0.25em] text-white/50">
-            PLURIMENTES
+            CONTEXTO
           </p>
           <h2 className="font-display mt-5 text-3xl leading-tight font-bold text-white sm:text-4xl lg:text-5xl">
             Toda mente aprende de um jeito.{" "}
             <span className="text-pm-yellow">Todos os jeitos importam.</span>
           </h2>
           <p className="mt-6 max-w-xl leading-relaxed text-white/60">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Nosso projeto nasceu para transformar informação em conhecimento. Criamos este espaço para ampliar a compreensão sobre a neurodiversidade e aproximar profissionais, estudantes e famílias de informações que favoreçam o respeito e o acolhimento. Conheça quem somos e por que este projeto existe.
           </p>
           <a
             href={ROUTES.sobreNos}

@@ -47,16 +47,16 @@ const CARDS: NeurodivergenceCard[] = [
     tag: "TEA",
     title: "Autismo",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Condição do neurodesenvolvimento que pode influenciar a comunicação, a interação social e a forma de perceber e responder ao ambiente.",
     color: "blue",
   },
   {
     icon: Zap,
     href: ROUTES.tdah,
     tag: "TDAH",
-    title: "TDAH",
+    title: "Transtorno do Déficit de Atenção e Hiperatividade",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Condição do neurodesenvolvimento associada a características como desatenção, impulsividade e hiperatividade, podendo impactar a aprendizagem.",
     color: "orange",
   },
   {
@@ -65,7 +65,7 @@ const CARDS: NeurodivergenceCard[] = [
     tag: "DISLEXIA",
     title: "Dislexia",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Caracteriza-se por dificuldades persistentes relacionadas à leitura e à escrita, podendo interferir no processo de aprendizagem escolar.",
     color: "purple",
   },
   {
@@ -74,16 +74,16 @@ const CARDS: NeurodivergenceCard[] = [
     tag: "DISCALCULIA",
     title: "Discalculia",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Envolve dificuldades específicas na aprendizagem da Matemática, especialmente na compreensão de números, quantidades e operações.",
     color: "red",
   },
   {
     icon: Users,
     href: ROUTES.tod,
     tag: "TOD",
-    title: "TOD",
+    title: "Transtorno Opositivo-Desafiador",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Caracteriza-se por comportamentos persistentes de oposição, desafio e dificuldade em lidar com regras e figuras de autoridade.",
     color: "green",
   },
   {
@@ -92,7 +92,7 @@ const CARDS: NeurodivergenceCard[] = [
     tag: "AH/SD",
     title: "Altas Habilidades",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Refere-se a estudantes que apresentam habilidades ou potencial elevado em determinadas áreas, necessitando de oportunidades adequadas para desenvolver suas potencialidades.",
     color: "yellow",
   },
 ];
@@ -109,15 +109,9 @@ export default function NeurodivergenceCards() {
             02&nbsp;&nbsp;&nbsp;GUIA ILUSTRADO
           </p>
           <h2 className="font-display text-pm-ink mt-4 text-4xl font-bold lg:text-5xl">
-            Conheça as Neurodivergências
+            Conheça algumas neurodivergências
           </h2>
         </div>
-        <p className="text-pm-gray max-w-sm text-right text-sm leading-relaxed lg:mt-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

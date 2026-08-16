@@ -17,16 +17,10 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-pm-gray mt-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            A neurodivergência refere-se às diferentes formas de funcionamento neurológico, que podem influenciar a maneira como cada pessoa aprende, pensa, percebe o ambiente, comunica-se e interage socialmente. Essa perspectiva reconhece as diferenças neurológicas como parte da diversidade humana e valoriza as particularidades de cada indivíduo.
           </p>
           <p className="text-pm-gray mt-4 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+           No contexto educacional, compreender a neurodivergência é fundamental para promover inclusão, respeito e equidade, considerando as necessidades e potencialidades de cada estudante e contribuindo para a redução de barreiras e do capacitismo.
           </p>
           <a
             href={`${ROUTES.home}neurodivergencia`}
