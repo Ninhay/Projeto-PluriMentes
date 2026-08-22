@@ -4,6 +4,7 @@ export function CartaoNumerado({
   numero,
   titulo,
   texto,
+  link,
   delay = 0,
   corNumero = "text-pm-blue",
 }: NumberedCardProps) {
@@ -24,6 +25,16 @@ export function CartaoNumerado({
             {titulo}
           </h2>
           <p className="text-pm-gray mt-4 leading-relaxed">{texto}</p>
+          {link ? (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-pm-blue mt-4 inline-block underline underline-offset-2 transition hover:text-pm-ink"
+            >
+              {link.label}
+            </a>
+          ) : null}
         </div>
       </div>
     </article>

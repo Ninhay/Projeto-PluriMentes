@@ -4,55 +4,44 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ProximaNeurodivergencia } from "@/components/ProximaNeuroDivergencia";
 import { ROUTES } from "@/constants/routes";
+import { Puzzle } from "lucide-react";
 
 const secoes: NumberedCardProps[] = [
   {
     numero: "01",
     titulo: "O que é o autismo?",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "O autismo, ou Transtorno do Espectro Autista (TEA), é uma condição do neurodesenvolvimento que pode influenciar a comunicação, a interação social e a forma como a pessoa percebe e vivencia o mundo. Cada pessoa autista é diferente, por isso suas características, habilidades e necessidades podem variar bastante.",
+    link: {
+      href: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/autismo",
+      label: "Saiba mais sobre o autismo",
+    },
   },
   {
     numero: "02",
     titulo: "Características",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Entre as características que podem estar presentes estão diferenças na comunicação e na interação social, interesses específicos, comportamentos repetitivos, preferência por determinadas rotinas e diferentes formas de responder a estímulos sensoriais, como sons, luzes, cheiros e texturas. Essas características não aparecem da mesma maneira em todas as pessoas autistas.",
   },
   {
     numero: "03",
     titulo: "Possíveis necessidades de apoio",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "As necessidades de apoio dependem de cada pessoa. Algumas podem precisar de auxílio na comunicação, na organização da rotina, nas atividades escolares ou na adaptação a mudanças e estímulos do ambiente. O apoio deve ser individualizado e pode envolver família, escola e profissionais especializados, de acordo com as necessidades da pessoa.",
   },
   {
     numero: "04",
     titulo: "Estratégias de acolhimento",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Um bom acolhimento começa pelo respeito às diferenças e pela compreensão das necessidades de cada pessoa. Na escola, podem ajudar atitudes como manter uma rotina organizada, explicar mudanças com antecedência, utilizar recursos visuais quando necessário, comunicar-se de forma clara, respeitar o tempo do estudante e oferecer um ambiente confortável e seguro. Também é importante combater o preconceito e o bullying.",
   },
   {
     numero: "05",
     titulo: "Inclusão no ambiente escolar",
     texto:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A inclusão acontece quando o estudante autista tem condições de participar das atividades escolares, aprender e conviver com os demais, sem ser excluído por suas diferenças. Para isso, a escola pode adaptar estratégias, materiais e ambientes conforme as necessidades do estudante, promovendo acessibilidade, respeito e participação.",
   },
 ];
-
-function IconeQuebraCabeca(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.5-1.02.968a2.501 2.501 0 1 1-3.214-3.214c.446-.166.855-.497.925-.968a.979.979 0 0 1 .276-.837l1.61-1.61a2.404 2.404 0 0 1 1.705-.707c.618 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.5 1.02-.968a2.501 2.501 0 1 1 3.214 3.214c-.446.166-.855.497-.925.968a.98.98 0 0 1-.276.837z" />
-    </svg>
-  );
-}
 
 export default function AutismoPage() {
   return (
@@ -92,7 +81,10 @@ export default function AutismoPage() {
           </a>
           <div className="mt-10 flex items-center gap-8 md:gap-10">
             <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-3xl bg-white/20 md:h-28 md:w-28">
-              <IconeQuebraCabeca className="h-10 w-10 text-white md:h-12 md:w-12" />
+              <Puzzle
+                className="h-10 w-10 text-white md:h-12 md:w-12"
+                aria-hidden="true"
+              />
             </div>
 
             <div>

@@ -4,6 +4,10 @@ export interface NumberedCardProps {
   numero: string;
   titulo: string;
   texto: string;
+  link?: {
+    href: string;
+    label: string;
+  };
   delay?: number;
   corNumero?: string;
 }
