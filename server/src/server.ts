@@ -13,6 +13,10 @@ app.use(cors({ origin: frontendUrl }));
 app.use(express.json());
 app.use("/api", contactRoutes);
 
+app.get("/", (_req, res) => {
+	res.json({ message: "API PluriMentes online" });
+});
+
 app.get("/health", (_req, res) => {
 	res.json({ status: "ok" });
 });
