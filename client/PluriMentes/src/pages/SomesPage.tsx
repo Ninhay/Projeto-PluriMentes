@@ -1,4 +1,4 @@
-import type { FormEvent, SVGProps } from "react";
+import { useState, type FormEvent, type SVGProps } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -94,10 +94,38 @@ const campo =
   "w-full rounded-xl border border-pm-ink/10 bg-pm-ink/[0.04] px-4 py-3.5 text-sm text-pm-ink outline-none transition placeholder:text-pm-gray/80 focus:border-pm-blue focus:ring-2 focus:ring-pm-blue/25";
 
 export default function SobrePage() {
-  function aoEnviar(e: FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState("");
+
+  async function aoEnviar(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const dados = Object.fromEntries(new FormData(e.currentTarget));
-    console.log("Mensagem:", dados); // TODO: trocar por API / EmailJS
+    const formulario = e.currentTarget;
+    const dados = Object.fromEntries(new FormData(formulario));
+
+    try {
+      const resposta = await fetch(
+        `${import.meta.env.VITE_API_URL ?? "http://localhost:3000"}/api/contact`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: dados.nome,
+            email: dados.email,
+            subject: dados.assunto,
+            message: dados.mensagem,
+          }),
+        },
+      );
+      const resultado = await resposta.json();
+
+      if (!resposta.ok) {
+        throw new Error(resultado.error ?? "Não foi possível enviar a mensagem.");
+      }
+
+      setStatus("Mensagem enviada com sucesso!");
+      formulario.reset();
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Erro ao enviar mensagem.");
+    }
   }
 
   return (
@@ -250,6 +278,7 @@ export default function SobrePage() {
                 Enviar mensagem
                 <IconeEnvio className="h-4 w-4" />
               </button>
+              {status && <p className="mt-4 text-sm text-pm-gray">{status}</p>}
             </form>
           </div>
         </div>

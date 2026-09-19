@@ -58,7 +58,7 @@ const cartoes: CartaoComunidade[] = [
       "Os quatro pilares da educação propostos pela UNESCO — aprender a conhecer, fazer, viver juntos e ser — contribuem para uma escola mais inclusiva. Eles valorizam não apenas o aprendizado, mas também o respeito às diferenças, a cooperação e o desenvolvimento de cada estudante. Na inclusão escolar, esses pilares ajudam a construir um ambiente onde todos possam aprender, participar, conviver e desenvolver suas potencialidades, respeitando diferentes formas de aprender, pensar e se comunicar.",
       corBadge: "bg-pm-blue",
     textoExtra:
-      "Saiba mais sobre os quatro pilares da educação no site ",
+        "Saiba mais sobre os quatro pilares da educação no site",
     link: {
       href: "https://institutoayrtonsenna.org.br/4-pilares-educacao-unesco/",
       label: "4 Pilares da Educação da UNESCO - Instituto Ayrton Senna.",

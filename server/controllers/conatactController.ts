@@ -5,6 +5,7 @@ import { sendContactEmail } from "../services/emailService.js";
 const contactSchema = z.object({
     name: z.string().trim().min(2, "Informe um nome válido.").max(100),
     email: z.string().trim().email("Por favor, insira um endereço de e-mail válido.").max(254),
+    subject: z.string().trim().min(2, "Informe um assunto válido.").max(200),
     message: z.string().trim().min(5, "A mensagem deve ter ao menos 5 caracteres.").max(5_000),
 });
 
@@ -15,10 +16,10 @@ export const contactController = async (req: Request, res: Response): Promise<vo
         return;
     }
 
-    const { name, email, message } = parsedContact.data;
+    const { name, email, subject, message } = parsedContact.data;
 
     try {
-        await sendContactEmail(name, email, message);
+        await sendContactEmail(name, email, subject, message);
         res.status(200).json({ message: "Mensagem enviada com sucesso!" });
     } catch (err) {
         console.error("Erro ao enviar email:", err);
