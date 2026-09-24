@@ -6,6 +6,15 @@ import {
   ROUTES,
 } from "@/constants/routes";
 
+const MENTES_COLORS = [
+  "text-pm-blue",
+  "text-pm-orange",
+  "text-pm-yellow",
+  "text-pm-green",
+  "text-pm-purple",
+  "text-pm-red",
+];
+
 export default function Header() {
   const [active, setActive] = useState(
     ACTIVE_NAVIGATION_BY_PATH[window.location.pathname] ?? "Início",
@@ -19,12 +28,14 @@ export default function Header() {
           href={`${ROUTES.home}#inicio`}
           className="flex shrink-0 items-center gap-2"
         >
-          <span aria-hidden="true" className="flex items-center">
-            <span className="bg-pm-yellow/80 h-8 w-8 rounded-full" />
-            <span className="bg-pm-blue/80 -ml-4 h-8 w-8 rounded-full" />
-          </span>
+          
           <span className="font-display text-pm-ink text-lg font-bold">
-            Pluri<span className="text-pm-blue">Mentes</span>
+            Pluri
+            {"Mentes".split("").map((char, index) => (
+              <span key={`${char}-${index}`} className={MENTES_COLORS[index]}>
+                {char}
+              </span>
+            ))}
           </span>
         </a>
 
